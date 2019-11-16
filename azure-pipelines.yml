@@ -31,7 +31,6 @@ steps:
   displayName: 'Maven pom.xml'
   inputs:
     mavenPomFile: 'pom.xml'
-    options: '-DskipITs --settings ./maven/settings.xml'
     goals: 'clean package'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
