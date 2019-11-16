@@ -26,14 +26,12 @@ steps:
     echo $(ENV) tesing
   displayName: 'Run a multi-line script'
 
+
 - task: Maven@3
   displayName: 'Maven pom.xml'
   inputs:
-    options: '-DskipITs --settings ./maven/settings.xml'
-
-- task: Maven@3
-  inputs:
     mavenPomFile: 'pom.xml'
+    options: '-DskipITs --settings ./maven/settings.xml'
     goals: 'clean package'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
