@@ -39,3 +39,6 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: MavenAuthenticate@0
+  inputs:
+    artifactsFeeds: prabhunitt
